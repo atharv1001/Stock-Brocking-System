@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="heading"><p>StockPlus</p>
+        <img src="Assets/login.png" width="400px" height="400px" style="margin-right: 500px;"></div>
+    
+    <div class="box">
+        <span class="borderline"></span>
+        <form method="post" action="Php_Connection/login.php">
+            <h2>Sign in</h2>
+            <div class="inputBox">
+                <input type="text" required="required" name="username">
+                <span>Username</span>
+                <i></i>
+            </div>
+            
+            <div class="inputBox">
+                <input type="password" required="required" name="password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a href="ragister.html">Create a new Account</a>
+                <!-- <a href="#">Signup</a> -->
+            </div>
+            <input type="submit" value="Login" class="ragister">
+            
+        </form>
+    </div>
+    
+
+    <script>
+        // Check for an error parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        
+        if (error) {
+            alert(decodeURIComponent(error));
+        }
+    </script>
+    
+    
+</body>
+</html>

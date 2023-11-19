@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="ragister-bg" style="display: inline;">
+        <img src="Assets/ragister.png" width="612px" height="408px" style="margin-top: 140px; margin-left: 50px;"></div>
+    </div>
+    
+    <div class="box">
+        <span class="borderline"></span>
+        <form method="post" action="Php_Connection/ragister.php">
+            <h2>Sign up</h2>
+            <div class="inputBox">
+                <input type="text" required="required" name="full_name">
+                <span>Full Name</span>
+                <i></i>
+            </div>
+
+            <div class="inputBox">
+                <input type="number" required="required" name="phone_number" maxlength="12">
+                <span>Phone No (With Country Code)</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" name="address">
+                <span>Address</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" name="username">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required" name="password">
+                <span>Password</span>
+                <i></i>
+            </div>
+            
+            <div class="agrement" >
+
+                <div class="inputBox">
+                    <label style="color: white; display: inline-block;">
+                        <input type="checkbox" id="confirm" required="required" style="display: inline-block;">
+                        I have read, understood, and hereby accept the terms and conditions outlined in this agreement.
+                    </label>
+                </div>
+                
+                
+            </div>
+            
+            
+            <input type="submit" value="Ragister" class="ragister">
+            
+        </form>
+    </div>
+    
+
+    <script>
+        // Check for an error parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+        
+        if (error) {
+            alert(decodeURIComponent(error));
+        }
+    </script>
+    
+    
+</body>
+</html>
